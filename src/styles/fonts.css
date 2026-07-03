@@ -1,0 +1,46 @@
+/* Premium Luxury Fonts for J Salon Franchise Landing Page */
+
+/* Modern sans-serif for body and subheadings */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* New Baskerville — local licensed serif for headings */
+@font-face {
+  font-family: 'New Baskerville';
+  src: url('/fonts/newbaskerville/newbaskerville-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'New Baskerville';
+  src: url('/fonts/newbaskerville/newbaskerville-italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'New Baskerville';
+  src: url('/fonts/newbaskerville/newbaskerville-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'New Baskerville';
+  src: url('/fonts/newbaskerville/newbaskerville-bold-italic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Apply fonts globally */
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'New Baskerville', serif;
+}
