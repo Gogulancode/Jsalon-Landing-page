@@ -1,7 +1,34 @@
+import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, TrendingUp, Users, Award } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 export default function Hero() {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!formRef.current || status === 'sending') return;
+
+    setStatus('sending');
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setStatus('success');
+          formRef.current?.reset();
+        },
+        () => {
+          setStatus('error');
+        }
+      );
+  };
  return (
  <div className="relative min-h-screen flex items-center">
  <div
@@ -126,16 +153,10 @@ export default function Hero() {
  </div>
 
  <form
- action="https://formsubmit.co/jsalonmail@gmail.com"
- method="POST"
- target="_blank"
- rel="noopener noreferrer"
+ ref={formRef}
+ onSubmit={handleSubmit}
  className="space-y-4"
  >
- <input type="hidden" name="_subject" value="New Franchise Enquiry - J Salon" />
- <input type="hidden" name="_captcha" value="false" />
- <input type="hidden" name="_template" value="table" />
-
  <div>
  <label className="block text-gray-700 mb-2">Full Name *</label>
  <input
@@ -204,10 +225,18 @@ export default function Hero() {
 
  <button
  type="submit"
- className="w-full bg-[#2E2E2E] text-white py-4 rounded-lg transition-all duration-300 hover:bg-[#5B4636] hover:scale-[1.02]"
+ disabled={status === 'sending'}
+ className="w-full bg-[#2E2E2E] text-white py-4 rounded-lg transition-all duration-300 hover:bg-[#5B4636] hover:scale-[1.02] disabled:opacity-70 disabled:cursor-not-allowed"
  >
- Get Franchise Details
+ {status === 'sending' ? 'Sending...' : 'Get Franchise Details'}
  </button>
+
+ {status === 'success' && (
+ <p className="text-sm text-green-600 text-center">Thank you! We will contact you shortly.</p>
+ )}
+ {status === 'error' && (
+ <p className="text-sm text-red-600 text-center">Something went wrong. Please try again.</p>
+ )}
 
  <p className="text-xs text-gray-500 text-center">
  By submitting, you agree to receive franchise information via email & SMS
