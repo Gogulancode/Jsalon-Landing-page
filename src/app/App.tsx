@@ -4,7 +4,6 @@ import FounderMessage from './components/FounderMessage';
 import InvestmentSnapshot from './components/InvestmentSnapshot';
 import FranchiseProcess from './components/FranchiseProcess';
 import Testimonials from './components/Testimonials';
-import SocialProof from './components/SocialProof';
 import FAQ from './components/FAQ';
 import ScarcityCTA from './components/ScarcityCTA';
 import StickyHeader from './components/StickyHeader';
@@ -19,7 +18,6 @@ export default function App() {
  <MobileCTA />
 
  <Hero />
- <SocialProof />
  <section id="opportunity">
  <WhyChooseUs />
  </section>
