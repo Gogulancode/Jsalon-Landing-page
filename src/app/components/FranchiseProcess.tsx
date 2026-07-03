@@ -78,10 +78,10 @@ export default function FranchiseProcess() {
  index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
  }`}
  >
- <div className={`flex-1 ${index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}`}>
+ <div className={`flex-1 w-full ${index % 2 === 0 ? 'lg:text-right' : 'lg:text-left'}`}>
  <div className={`bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 ${
  index % 2 === 0 ? 'lg:ml-auto' : 'lg:mr-auto'
- } max-w-md`}>
+ } max-w-md mx-auto`}>
  <div className={`flex items-center gap-4 mb-4 ${index % 2 === 0 ? 'lg:flex-row-reverse' : ''}`}>
  <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-xl flex items-center justify-center shadow-lg flex-shrink-0">
  <step.icon className="w-8 h-8 text-white" />
@@ -104,7 +104,7 @@ export default function FranchiseProcess() {
 
  <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full border-4 border-white shadow-lg z-10" />
 
- <div className="flex-1" />
+ <div className="flex-1 hidden lg:block" />
  </motion.div>
  ))}
  </div>

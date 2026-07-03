@@ -35,12 +35,12 @@ export default function App() {
  <footer className="bg-[#2E2E2E] text-white py-16">
  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
  <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12 items-start">
- <div className="flex flex-col items-start">
+ <div className="flex flex-col items-center md:items-start text-center md:text-left">
  <div className="mb-5">
  <img
  src="/j%20salon%20logo%20-footer.png"
  alt="J Salon"
- className="h-48 w-auto object-contain drop-shadow-sm"
+ className="h-32 md:h-48 w-auto object-contain drop-shadow-sm"
  />
  </div>
  <p className="text-gray-400 max-w-xs">

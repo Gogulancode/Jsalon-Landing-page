@@ -9,7 +9,7 @@ export default function Hero() {
  style={{backgroundImage: `linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.65) 100%), url('/hero-bg.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center'}}
  />
 
- <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full">
+ <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 md:py-16 w-full">
  <div className="grid lg:grid-cols-2 gap-12 items-center">
  <motion.div
  initial={{ opacity: 0, x: -50 }}
