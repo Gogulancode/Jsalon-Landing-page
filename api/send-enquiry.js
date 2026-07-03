@@ -30,7 +30,7 @@ export default async function handler(req, res) {
 
     const errorText = await response.text();
     console.error('EmailJS error:', errorText);
-    return res.status(500).json({ error: 'Failed to send enquiry' });
+    return res.status(500).json({ error: 'Failed to send enquiry', detail: errorText });
   } catch (error) {
     console.error('Server error:', error);
     return res.status(500).json({ error: 'Failed to send enquiry' });
