@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, TrendingUp, Users, Award } from 'lucide-react';
+import { CheckCircle, TrendingUp, Award } from 'lucide-react';
 
 export default function Hero() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -51,11 +51,11 @@ export default function Hero() {
  transition={{ delay: 0.2 }}
  className="inline-block bg-yellow-500/20 backdrop-blur-sm border border-yellow-500/30 px-4 py-2 rounded-full mb-6"
  >
- <span className="text-yellow-400 text-sm">India's Premier Salon Franchise</span>
+ <span className="text-yellow-400 text-sm">J Salon – A Mass Premium Salon Brand</span>
  </motion.div>
 
  <h1 className="text-5xl md:text-6xl lg:text-7xl mb-6 text-white" >
- Own a Premium Salon Franchise
+ Own a Salon Franchise
  <span className="block text-[#F2E3A6] mt-2">
  in Your City
  </span>
@@ -65,7 +65,7 @@ export default function Hero() {
  Build a scalable beauty business with expert training, recruitment support, operational excellence, and powerful marketing systems.
  </p>
 
- <div className="grid grid-cols-2 gap-4 mb-8">
+ <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
  <motion.div
  initial={{ opacity: 0, y: 20 }}
  animate={{ opacity: 1, y: 0 }}
@@ -100,21 +100,6 @@ export default function Hero() {
  initial={{ opacity: 0, y: 20 }}
  animate={{ opacity: 1, y: 0 }}
  transition={{ delay: 0.6 }}
- className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 hover:bg-white/15 transition-all duration-300"
- >
- <div className="flex items-center gap-3 mb-2">
- <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center">
- <Users className="w-5 h-5 text-white" />
- </div>
- <span className="text-yellow-400 text-sm">Network</span>
- </div>
- <p className="text-white text-lg">40+ Salons</p>
- </motion.div>
-
- <motion.div
- initial={{ opacity: 0, y: 20 }}
- animate={{ opacity: 1, y: 0 }}
- transition={{ delay: 0.7 }}
  className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 hover:bg-white/15 transition-all duration-300"
  >
  <div className="flex items-center gap-3 mb-2">

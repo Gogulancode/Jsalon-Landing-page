@@ -13,14 +13,14 @@ export default function InvestmentSnapshot() {
  {
  icon: TrendingUp,
  label: 'Projected ROI',
- value: '12-18 Months',
+ value: '18-24 Months',
  description: 'Based on location and operations',
  gradient: 'from-green-400 to-green-600',
  },
  {
  icon: MapPin,
  label: 'Space Required',
- value: '800-1500 sq ft',
+ value: '500-800 sq ft',
  description: 'Prime retail location',
  gradient: 'from-blue-400 to-blue-600',
  },

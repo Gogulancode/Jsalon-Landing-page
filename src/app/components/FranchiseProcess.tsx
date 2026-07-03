@@ -25,7 +25,7 @@ export default function FranchiseProcess() {
  icon: Building,
  title: 'Location & Setup',
  description: 'Site selection, interior design, equipment installation, and salon setup',
- duration: '45-60 Days',
+ duration: '30-45 Days',
  },
  {
  icon: GraduationCap,

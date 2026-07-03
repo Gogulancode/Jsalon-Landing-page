@@ -63,7 +63,7 @@ export default function WhyChooseUs() {
  </h2>
 
  <p className="text-xl text-gray-600 max-w-3xl mx-auto">
- Join India's most trusted premium salon franchise network backed by 20 years of expertise and 40+ operational salons
+ Join India's most trusted premium salon franchise network backed by 20 years of expertise
  </p>
  </motion.div>
 

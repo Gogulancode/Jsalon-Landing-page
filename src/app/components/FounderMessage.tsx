@@ -47,7 +47,7 @@ export default function FounderMessage() {
  <div className="mb-6">
  <Quote className="w-16 h-16 text-yellow-500 mb-4" />
  <h2 className="text-4xl md:text-5xl mb-4" >
- A Message from Our Founders
+ A Message from Our Founder
  </h2>
  </div>
 
@@ -72,7 +72,7 @@ export default function FounderMessage() {
  <div className="mt-8 pt-8 border-t border-gray-700">
  <div className="flex items-center gap-4">
  <div>
- <p className="text-xl text-white" >Founders, J Salon</p>
+ <p className="text-xl text-white" >Founder, J Salon</p>
  <p className="text-gray-400">Building India's Premier Salon Network</p>
  </div>
  </div>
