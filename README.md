@@ -6,6 +6,10 @@ A premium, SEO-optimized React landing page for J Salon franchise opportunities.
 
 **Planned domain:** https://franchise.jsalons.co
 
+## Deploy to Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FGogulancode%2FJsalon-Landing-page.git)
+
 ## Tech Stack
 
 - React 19 + TypeScript
@@ -21,7 +25,7 @@ A premium, SEO-optimized React landing page for J Salon franchise opportunities.
 - Fully responsive (mobile, tablet, desktop)
 - SEO optimized with meta tags, Open Graph, Twitter Cards, JSON-LD structured data
 - Accessible components with proper ARIA labels
-- Lead capture form with validation
+- Lead capture form with validation — enquiries go to **jsalonmail@gmail.com**
 - Smooth scroll navigation
 - Embedded YouTube video
 - Footer links configured as requested
@@ -32,8 +36,6 @@ A premium, SEO-optimized React landing page for J Salon franchise opportunities.
 - **Franchise Opportunity** → Same page (#opportunity)
 - **Investment Details** → Same page (#investment)
 - **Contact Us** → https://jsalons.co/contact-us/
-- **Privacy Policy** → No redirect (placeholder)
-- **Terms & Conditions** → No redirect (placeholder)
 - **Franchise Agreement** → No redirect (placeholder)
 - **YouTube Video** → https://www.youtube.com/watch?v=FDORzfKYngA&t=18s
 
@@ -55,7 +57,13 @@ npm run preview
 
 ## Deployment
 
-The `dist` folder is ready for static hosting. Deploy to any static host (Vercel, Netlify, Cloudflare Pages, AWS S3, etc.) and configure the domain to `franchise.jsalons.co`.
+The project is configured for **Vercel** (`vercel.json`). Vercel will auto-detect Vite, run `npm run build`, and serve the `dist` folder.
+
+To deploy manually:
+1. Push the repo to GitHub (already done).
+2. Import the repo in the [Vercel dashboard](https://vercel.com/new).
+3. Keep the default settings and click **Deploy**.
+4. Add a custom domain `franchise.jsalons.co` in project settings if needed.
 
 ## SEO
 
