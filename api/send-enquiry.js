@@ -1,4 +1,4 @@
-const emailjs = require('@emailjs/nodejs');
+const EMAILJS_API = 'https://api.emailjs.com/api/v1.0/email/send';
 
 module.exports = async (req, res) => {
   if (req.method !== 'POST') {
@@ -12,15 +12,27 @@ module.exports = async (req, res) => {
   }
 
   try {
-    await emailjs.send(
-      process.env.EMAILJS_SERVICE_ID,
-      process.env.EMAILJS_TEMPLATE_ID,
-      { name, phone, email, city, budget, experience },
-      { privateKey: process.env.EMAILJS_PRIVATE_KEY }
-    );
-    return res.status(200).json({ success: true });
+    const response = await fetch(EMAILJS_API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        service_id: process.env.EMAILJS_SERVICE_ID,
+        template_id: process.env.EMAILJS_TEMPLATE_ID,
+        user_id: process.env.EMAILJS_PUBLIC_KEY,
+        accessToken: process.env.EMAILJS_PRIVATE_KEY,
+        template_params: { name, phone, email, city, budget, experience },
+      }),
+    });
+
+    if (response.ok) {
+      return res.status(200).json({ success: true });
+    }
+
+    const errorText = await response.text();
+    console.error('EmailJS error:', errorText);
+    return res.status(500).json({ error: 'Failed to send enquiry' });
   } catch (error) {
-    console.error('EmailJS error:', error);
+    console.error('Server error:', error);
     return res.status(500).json({ error: 'Failed to send enquiry' });
   }
 };
