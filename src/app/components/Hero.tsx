@@ -14,10 +14,10 @@ export default function Hero() {
     setStatus('sending');
     emailjs
       .sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        import.meta.env.VITE_EMAILJS_SERVICE_ID?.trim(),
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID?.trim(),
         formRef.current,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY?.trim()
       )
       .then(
         () => {
