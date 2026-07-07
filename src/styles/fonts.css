@@ -1,7 +1,6 @@
 /* Premium Luxury Fonts for J Salon Franchise Landing Page */
 
-/* Modern sans-serif for body and subheadings */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* Modern sans-serif for body and subheadings — loaded via <link> in index.html for faster discovery */
 
 /* New Baskerville — local licensed serif for headings */
 @font-face {
