@@ -143,8 +143,9 @@ export default function Hero() {
  className="space-y-4"
  >
  <div>
- <label className="block text-gray-700 mb-2">Full Name *</label>
+ <label htmlFor="name" className="block text-gray-700 mb-2">Full Name *</label>
  <input
+ id="name"
  type="text"
  name="name"
  required
@@ -154,8 +155,9 @@ export default function Hero() {
  </div>
 
  <div>
- <label className="block text-gray-700 mb-2">Phone Number *</label>
+ <label htmlFor="phone" className="block text-gray-700 mb-2">Phone Number *</label>
  <input
+ id="phone"
  type="tel"
  name="phone"
  required
@@ -165,8 +167,9 @@ export default function Hero() {
  </div>
 
  <div>
- <label className="block text-gray-700 mb-2">Email Address *</label>
+ <label htmlFor="email" className="block text-gray-700 mb-2">Email Address *</label>
  <input
+ id="email"
  type="email"
  name="email"
  required
@@ -176,8 +179,9 @@ export default function Hero() {
  </div>
 
  <div>
- <label className="block text-gray-700 mb-2">City *</label>
+ <label htmlFor="city" className="block text-gray-700 mb-2">City *</label>
  <input
+ id="city"
  type="text"
  name="city"
  required
@@ -187,8 +191,8 @@ export default function Hero() {
  </div>
 
  <div>
- <label className="block text-gray-700 mb-2">Investment Budget *</label>
- <select name="budget" required className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500/20 focus:border-yellow-500">
+ <label htmlFor="budget" className="block text-gray-700 mb-2">Investment Budget *</label>
+ <select id="budget" name="budget" required className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500/20 focus:border-yellow-500">
  <option value="" disabled selected>Select budget range</option>
  <option>₹20-30 Lakhs</option>
  <option>₹30-40 Lakhs</option>
@@ -198,8 +202,8 @@ export default function Hero() {
  </div>
 
  <div>
- <label className="block text-gray-700 mb-2">Business Experience</label>
- <select name="experience" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500/20 focus:border-yellow-500">
+ <label htmlFor="experience" className="block text-gray-700 mb-2">Business Experience</label>
+ <select id="experience" name="experience" className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500/20 focus:border-yellow-500">
  <option value="" disabled selected>Select experience level</option>
  <option>First-time entrepreneur</option>
  <option>1-3 years</option>
