@@ -1,16 +1,16 @@
-import { Suspense, lazy } from 'react';
 import Hero from './components/Hero';
 import StickyHeader from './components/StickyHeader';
 import FloatingCTA from './components/FloatingCTA';
 import MobileCTA from './components/MobileCTA';
+import LazySection from './components/LazySection';
 
-const WhyChooseUs = lazy(() => import('./components/WhyChooseUs'));
-const FounderMessage = lazy(() => import('./components/FounderMessage'));
-const InvestmentSnapshot = lazy(() => import('./components/InvestmentSnapshot'));
-const FranchiseProcess = lazy(() => import('./components/FranchiseProcess'));
-const Testimonials = lazy(() => import('./components/Testimonials'));
-const FAQ = lazy(() => import('./components/FAQ'));
-const ScarcityCTA = lazy(() => import('./components/ScarcityCTA'));
+const importWhyChooseUs = () => import('./components/WhyChooseUs');
+const importFounderMessage = () => import('./components/FounderMessage');
+const importInvestmentSnapshot = () => import('./components/InvestmentSnapshot');
+const importFranchiseProcess = () => import('./components/FranchiseProcess');
+const importTestimonials = () => import('./components/Testimonials');
+const importFAQ = () => import('./components/FAQ');
+const importScarcityCTA = () => import('./components/ScarcityCTA');
 
 export default function App() {
   return (
@@ -20,19 +20,18 @@ export default function App() {
       <MobileCTA />
 
       <Hero />
-      <Suspense fallback={null}>
-        <section id="opportunity">
-          <WhyChooseUs />
-        </section>
-        <FounderMessage />
-        <section id="investment">
-          <InvestmentSnapshot />
-        </section>
-        <FranchiseProcess />
-        <Testimonials />
-        <FAQ />
-        <ScarcityCTA />
-      </Suspense>
+
+      <section id="opportunity">
+        <LazySection importFn={importWhyChooseUs} />
+      </section>
+      <LazySection importFn={importFounderMessage} />
+      <section id="investment">
+        <LazySection importFn={importInvestmentSnapshot} />
+      </section>
+      <LazySection importFn={importFranchiseProcess} />
+      <LazySection importFn={importTestimonials} />
+      <LazySection importFn={importFAQ} />
+      <LazySection importFn={importScarcityCTA} />
 
       <footer className="bg-[#2E2E2E] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
