@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { MessageSquare } from 'lucide-react';
 
 export default function MobileCTA() {
@@ -22,25 +21,21 @@ export default function MobileCTA() {
   };
 
   return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.div
-          initial={{ y: 100 }}
-          animate={{ y: 0 }}
-          exit={{ y: 100 }}
-          className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-2xl"
+    <div
+      aria-hidden={!isVisible}
+      className={`lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-2xl transition-transform duration-300 ${
+        isVisible ? 'translate-y-0' : 'translate-y-full'
+      }`}
+    >
+      <div className="p-4">
+        <button
+          onClick={scrollToForm}
+          className="w-full flex items-center justify-center gap-2 bg-[#2E2E2E] text-white px-4 py-4 rounded-lg transition-all duration-300 hover:bg-[#5B4636]"
         >
-          <div className="p-4">
-            <button
-              onClick={scrollToForm}
-              className="w-full flex items-center justify-center gap-2 bg-[#2E2E2E] text-white px-4 py-4 rounded-lg transition-all duration-300 hover:bg-[#5B4636]"
-            >
-              <MessageSquare className="w-5 h-5" />
-              <span>Enquire Now</span>
-            </button>
-          </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+          <MessageSquare className="w-5 h-5" />
+          <span>Enquire Now</span>
+        </button>
+      </div>
+    </div>
   );
 }
