@@ -83,7 +83,7 @@ export default function Hero() {
                   </div>
                   <span className="text-yellow-400 text-sm">ROI Timeline</span>
                 </div>
-                <p className="text-white text-lg">12-18 Months</p>
+                <p className="text-white text-lg">18-24 Months</p>
               </div>
 
               <div

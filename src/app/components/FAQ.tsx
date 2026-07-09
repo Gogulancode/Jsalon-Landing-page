@@ -12,7 +12,7 @@ export default function FAQ() {
  },
  {
  question: 'How long does it take to break even and see returns?',
- answer: 'Based on our franchise network data, most franchises achieve break-even within 12-18 months. The actual timeline depends on factors like location, operational efficiency, and market conditions. We provide continuous support to help you optimize performance and reach profitability faster.',
+ answer: 'Based on our franchise network data, most franchises achieve break-even within 18-24 months. The actual timeline depends on factors like location, operational efficiency, and market conditions. We provide continuous support to help you optimize performance and reach profitability faster.',
  },
  {
  question: 'What kind of support does J Salon provide to franchisees?',
@@ -24,11 +24,11 @@ export default function FAQ() {
  },
  {
  question: 'What space requirements are needed for a J Salon franchise?',
- answer: 'Typically, you need 800-1500 square feet of retail space in a prime location with good visibility and accessibility. Our team will help you identify the perfect location and design an efficient layout that maximizes your space.',
+ answer: 'Typically, you need 500-800 square feet of retail space in a prime location with good visibility and accessibility. Our team will help you identify the perfect location and design an efficient layout that maximizes your space.',
  },
  {
  question: 'How does the franchise application and approval process work?',
- answer: 'The process includes: (1) Initial enquiry and discussion, (2) Application submission and financial assessment, (3) Business plan review, (4) Agreement signing, (5) Location selection and setup, (6) Training program, and (7) Grand opening support. The entire process typically takes 60-90 days.',
+ answer: 'The process includes: (1) Initial enquiry and discussion, (2) Application submission and financial assessment, (3) Business plan review, (4) Agreement signing, (5) Location selection and setup, (6) Training program, and (7) Grand opening support. The entire process typically takes 30-45 days.',
  },
  {
  question: 'What are the ongoing fees and royalties?',
@@ -40,7 +40,7 @@ export default function FAQ() {
  },
  {
  question: 'What makes J Salon different from other salon franchises?',
- answer: 'J Salon stands out with 20 years of industry expertise, a proven franchise model with 500+ successful partners, comprehensive recruitment and training support, proprietary nail products, continuous marketing assistance, and strong brand recognition with 50,000+ loyal customers.',
+ answer: 'J Salon stands out with 20 years of industry expertise, comprehensive recruitment and training support, proprietary nail products, continuous marketing assistance, and strong brand recognition with 50,000+ loyal customers.',
  },
  {
  question: 'What territories or cities are available for franchising?',
