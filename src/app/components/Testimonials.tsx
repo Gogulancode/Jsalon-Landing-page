@@ -7,38 +7,26 @@ export default function Testimonials() {
 
  const testimonials = [
  {
- name: 'Vaishali Shah',
- location: 'Mumbai',
- role: 'Franchise Owner',
  rating: 5,
- image: 'https://images.unsplash.com/photo-1614438865362-9137f7e3036e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw3fHxwcmVtaXVtJTIwYmVhdXR5JTIwc2Fsb24lMjBlbGVnYW50JTIwbW9kZXJufGVufDF8fHx8MTc3ODc1NDY2NHww&ixlib=rb-4.1.0&q=80&w=400',
+ image: 'https://images.unsplash.com/photo-1614438865362-9137f7e3036e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw3fHxwcmVtaXVtJTIwYmVhdXR5JTIwc2Fsb24lMjBlbGVnYW50JTIwbW9kZXJu&ixlib=rb-4.1.0&q=80&w=400',
  quote: 'The support from J Salon has been extremely helpful throughout my journey - from setup to stabilization. The training programs and marketing assistance have been instrumental in our success.',
  businessAge: '2 years',
  },
  {
- name: 'Jiten Shah',
- location: 'Hyderabad',
- role: 'Franchise Owner',
  rating: 5,
- image: 'https://images.unsplash.com/photo-1600948836101-f9ffda59d250?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmVtaXVtJTIwYmVhdXR5JTIwc2Fsb24lMjBlbGVnYW50JTIwbW9kZXJufGVufDF8fHx8MTc3ODc1NDY2NHww&ixlib=rb-4.1.0&q=80&w=400',
+ image: 'https://images.unsplash.com/photo-1600948836101-f9ffda59d250?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcmVtaXVtJTIwYmVhdXR5JTIwc2Fsb24lMjBlbGVnYW50JTIwbW9kZXJu&ixlib=rb-4.1.0&q=80&w=400',
  quote: 'Our partnership with J Salon has been unwavering, fostering innovation and growth. The continuous strategic guidance and operational support have exceeded our expectations.',
  businessAge: '3 years',
  },
  {
- name: 'Mahesh Chavan',
- location: 'Navi Mumbai (Seawoods)',
- role: 'Franchise Owner',
  rating: 5,
- image: 'https://images.unsplash.com/photo-1706629503650-cade709d15e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw2fHxwcmVtaXVtJTIwYmVhdXR5JTIwc2Fsb24lMjBlbGVnYW50JTIwbW9kZXJufGVufDF8fHx8MTc3ODc1NDY2NHww&ixlib=rb-4.1.0&q=80&w=400',
+ image: 'https://images.unsplash.com/photo-1706629503650-cade709d15e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw2fHxwcmVtaXVtJTIwYmVhdXR5JTIwc2Fsb24lMjBlbGVnYW50JTIwbW9kZXJu&ixlib=rb-4.1.0&q=80&w=400',
  quote: 'J Salon\'s brand presence is felt all the time, especially during challenging situations. Their recruitment support and training ecosystem are world-class.',
  businessAge: '18 months',
  },
  {
- name: 'Priya Deshmukh',
- location: 'Pune',
- role: 'Franchise Owner',
  rating: 5,
- image: 'https://images.unsplash.com/photo-1706629505300-168aa1604912?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxwcmVtaXVtJTIwYmVhdXR5JTIwc2Fsb24lMjBlbGVnYW50JTIwbW9kZXJufGVufDF8fHx8MTc3ODc1NDY2NHww&ixlib=rb-4.1.0&q=80&w=400',
+ image: 'https://images.unsplash.com/photo-1706629505300-168aa1604912?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxwcmVtaXVtJTIwYmVhdXR5JTIwc2Fsb24lMjBlbGVnYW50JTIwbW9kZXJu&ixlib=rb-4.1.0&q=80&w=400',
  quote: 'As a first-time entrepreneur, the comprehensive training and setup support gave me the confidence to succeed. The ROI projections were accurate and we\'re already seeing strong returns.',
  businessAge: '1 year',
  },
@@ -86,19 +74,9 @@ export default function Testimonials() {
  <div className="md:col-span-2 relative h-64 md:h-auto">
  <img
  src={testimonials[currentIndex].image}
- alt={testimonials[currentIndex].name}
+ alt="Franchise partner"
  className="w-full h-full object-cover"
  />
- <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
- <div className="absolute bottom-6 left-6 right-6">
- <h3 className="text-2xl text-white mb-1" >
- {testimonials[currentIndex].name}
- </h3>
- <p className="text-yellow-400">{testimonials[currentIndex].location}</p>
- <p className="text-gray-300 text-sm mt-1">
- {testimonials[currentIndex].role} • {testimonials[currentIndex].businessAge}
- </p>
- </div>
  </div>
 
  <div className="md:col-span-3 p-8 md:p-12 flex flex-col justify-center">
