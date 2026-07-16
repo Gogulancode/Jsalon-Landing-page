@@ -36,7 +36,7 @@ export default function WhyChooseUs() {
  {
  icon: TrendingUp,
  title: 'Proven ROI Timeline',
- description: 'Projected 12-18 months ROI with scalable business model and multiple revenue streams.',
+ description: 'Projected 18-24 months ROI with scalable business model and multiple revenue streams.',
  },
  {
  icon: Headphones,

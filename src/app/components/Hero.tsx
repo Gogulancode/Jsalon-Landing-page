@@ -1,10 +1,12 @@
 import { useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { CheckCircle, TrendingUp, Award } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 export default function Hero() {
   const formRef = useRef<HTMLFormElement>(null);
-  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const navigate = useNavigate();
+  const [status, setStatus] = useState<'idle' | 'sending' | 'error'>('idle');
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -20,8 +22,7 @@ export default function Hero() {
       )
       .then(
         () => {
-          setStatus('success');
-          formRef.current?.reset();
+          navigate('/thank-you');
         },
         () => {
           setStatus('error');
@@ -210,9 +211,6 @@ export default function Hero() {
                 {status === 'sending' ? 'Sending...' : 'Get Franchise Details'}
               </button>
 
-              {status === 'success' && (
-                <p className="text-sm text-green-600 text-center">Thank you! We will contact you shortly.</p>
-              )}
               {status === 'error' && (
                 <p className="text-sm text-red-600 text-center">Something went wrong. Please try again.</p>
               )}
