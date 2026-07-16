@@ -1,4 +1,4 @@
-import { Suspense, lazy } from 'react';
+import { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Hero from './components/Hero';
 import StickyHeader from './components/StickyHeader';
@@ -39,6 +39,19 @@ function HomePage() {
 function Layout() {
   const location = useLocation();
   const isHome = location.pathname === '/';
+
+  useEffect(() => {
+    // Push a virtual pageview to GTM on every React Router navigation
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'pageview',
+        page: {
+          title: document.title,
+          path: location.pathname + location.search,
+        },
+      });
+    }
+  }, [location.pathname, location.search]);
 
   return (
     <div className="min-h-screen bg-white">
