@@ -41,14 +41,11 @@ function Layout() {
   const isHome = location.pathname === '/';
 
   useEffect(() => {
-    // Push a virtual pageview to GTM on every React Router navigation
-    if (typeof window !== 'undefined' && window.dataLayer) {
-      window.dataLayer.push({
-        event: 'pageview',
-        page: {
-          title: document.title,
-          path: location.pathname + location.search,
-        },
+    // Send a page_view to Google Ads (gtag) on every React Router navigation
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', 'AW-17963549873', {
+        page_title: document.title,
+        page_path: location.pathname + location.search,
       });
     }
   }, [location.pathname, location.search]);

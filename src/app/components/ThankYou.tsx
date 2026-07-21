@@ -4,15 +4,6 @@ import { CheckCircle, ArrowLeft, Phone, Mail } from 'lucide-react';
 
 export default function ThankYou() {
   useEffect(() => {
-    // GTM conversion event for a successful franchise enquiry
-    if (typeof window !== 'undefined' && window.dataLayer) {
-      window.dataLayer.push({
-        event: 'franchise_enquiry_submit',
-        conversionValue: 1,
-        currency: 'INR',
-      });
-    }
-
     // Meta Pixel conversion event
     if (typeof window !== 'undefined' && window.fbq) {
       window.fbq('track', 'Lead');
